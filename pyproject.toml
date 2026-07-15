@@ -1,0 +1,23 @@
+[project]
+name = "kh-tracker"
+version = "0.1.0"
+description = "Multi-object tracking from mathematical primitives: a from-scratch 6D constant-velocity Kalman filter + Hungarian assignment over a blended IoU/appearance cost."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Neel Shah", email = "neeljshah22@gmail.com" }]
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+hungarian = ["scipy>=1.10"]
+dev = ["pytest>=7.0", "scipy>=1.10"]
+
+[project.urls]
+Homepage = "https://github.com/neeljshah/kalman-hungarian-tracker"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
